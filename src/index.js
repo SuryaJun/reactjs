@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import './index.css';
-import App from './tugas/baasic_komponen/Counterstate';
-// import App from './App';
+import './index.css';
+// import App from './tugas/baasic_komponen/Counterstate';
+import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
