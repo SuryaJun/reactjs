@@ -1,23 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import Bcomponent from "./tugas/Bcomponent/indext";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Learn more,<code>keep practice</code> and keep going.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Bcomponent />
     </div>
   );
 }

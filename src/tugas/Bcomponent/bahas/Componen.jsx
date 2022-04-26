@@ -1,9 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class Counterstate extends Component {
+class Componen extends React.Component {
     constructor(props) {
-        super(props);
-
+        super(props)
         this.state = {
             count: 0,
         };
@@ -22,16 +21,16 @@ export default class Counterstate extends Component {
     };
     
     render() {
-        return (
+        return(
             <div>
-                <h1>Hi State Reactjs</h1>
-                <h3>counter app</h3>
-                <p>The count is: {this.state.count}</p>
+                <h1>Komponen class</h1>
+                <h3>Hi {this.props.name }</h3>
                 <button onClick={this.decrement}>-</button>
+                <span>{' '} {this.state.count} {' '}</span>
                 <button onClick={this.increment}>+</button>
             </div>
-        );
+        )
     }
-    
 }
 
+export default Componen;
