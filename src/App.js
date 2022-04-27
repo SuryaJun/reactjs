@@ -1,9 +1,10 @@
-import Bcomponent from "./tugas/Bcomponent/indext";
+import Styling from "./tugas/Bcomponent/indext";
+
 
 function App() {
   return (
     <div className="App">
-      <Bcomponent />
+      <Styling />
     </div>
   );
 }
