@@ -10,7 +10,7 @@ class App extends Component {
     {/* <!-- Navbar --> */}
       <nav className="navbar navbar-light bg-secondary fixed-top shadow">
     <div className="container" />
-      <a className="navbar-brand" href="#">Surya J</a>
+      <a className="navbar-brand" href="/">Surya J</a>
       <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span className="navbar-toggler-icon"></span>
       </button>
