@@ -27,7 +27,7 @@ const Isi = (submitForm) => {
         if(Object.keys(errors).length === 0 && dataValid) {
             submitForm(true);
         }
-    }, [errors]);
+    }, [errors, dataValid, submitForm]);
 
     return { handleChange, handleFormSubmit, errors, values };
 };
