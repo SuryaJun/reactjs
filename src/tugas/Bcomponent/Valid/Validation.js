@@ -11,6 +11,8 @@ const validation = (values) => {
     }
     if(!values.password) {
         errors.password="Kolom tidak boleh kosong.";
+    } else if (values.password.lenght < 5) {
+        errors.password = "Password harus lebih dari 5 karakter.";
     }
 
     return errors;

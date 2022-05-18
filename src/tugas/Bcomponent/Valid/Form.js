@@ -11,7 +11,7 @@ const Form = () => {
     return (
     <div>
         {!formSubmit ? (
-        <Register submitForm={submitForm}/>) : (<Valids />)};
+        <Register submitForm={submitForm} />) : (<Valids />)}
     </div>
     );
 };
