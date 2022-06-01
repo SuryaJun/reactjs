@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 
+
 const url =`https://newsapi.org/v2/top-headlines?country=id&apiKey=3f0ec6c5d4d84e88a5e1b24efad834d8`
 
 class Prom extends React.Component {
@@ -12,7 +13,7 @@ class Prom extends React.Component {
     
     News() {
         axios
-            .get(url)
+            .get('https://newsapi.org/v2/top-headlines?country=id&apiKey=3f0ec6c5d4d84e88a5e1b24efad834d8')
             .then(response => 
                 response.data.articles.map(
                     newsdata => ({
@@ -51,33 +52,32 @@ class Prom extends React.Component {
                     </div>
                 </div>
                 
-                {!loading ? (
-                    artData.map(data => {
-                        
-                        return (
-                            <div key={data}>
-                                <div className="col-3">
-                                    <div className="card" style={{ width: "15rem", margin: "15px", boxShadow: "0px 0px 5px", borderRadius: "15px" }}>
-                                        <img className="card-img-top" src={data.urlToImage} alt='...' />
-                                        <div className="content-detail">
-                                        <h4 className="card-title">{data.title}</h4>
-                                        <p className="card-text">{data.description}</p>
-                                        <a href='${url}' class="btn btn-primary" >More..</a>
-                                
+                    {!loading ? (
+                        artData.map(data => {
+                
+                            return (
+                                <div key={data.title}>
+                                    <div className="cardWrapper">
+                                        <div className="card">
+                                            <img src={newsdata.urlToImage} alt='' />
+                                            <div className="card-body">
+                                            <h4 className="card-title">{data.title}</h4>
+                                            <p className="card-text">{data.description}</p>
+                                            <a href='${url}' className="btn btn-primary" >More..</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        );
-                    })
-                ) : (
+                            );
+                        })
+                    ) : (
+                        
+
                 <div className="container">
                     <p className="text-center">Wait...</p>
                 </div>
                 
-                )}
-
-            </React.Fragment>
+           </React.Fragment>
         )
     }
 }
